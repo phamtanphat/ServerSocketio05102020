@@ -6,6 +6,7 @@ server.listen(process.env.PORT || 3000 ,() => console.log("Server Started"));
 
 io.sockets.on('connection', function(socket){
     console.log("Co thiet bị kết nôi");
+    socket.emit('statusconnect', {message : 'Ket noi thanh cong'})
 });
 
 
